@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Water Tank - 10 Levels</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .tank{
+            width: 220px;
+            height: 450px;
+            border: 5px solid black;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            background-color: white;
+        }
+
+        .water{
+            width: 100%;
+            height: 0%;
+            background-color: deepskyblue;
+            position: absolute;
+            bottom: 0;
+            transition: 0.5s;
+        }
+
+        button{
+            padding: 12px 22px;
+            margin: 15px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        h2{
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2>Water Tank - 10 Levels</h2>
+
+    <div class="tank">
+        <div class="water" id="water"></div>
+    </div>
+
+    <h3 id="text">Tank Empty</h3>
+    <button onclick="fillWater()">Fill Water</button>
+    <button onclick="removeWater()">Remove Water</button>
+
+    <script>
+
+        let level = 0;
+
+        function fillWater(){
+
+            if(level < 10){
+                level++;
+            }
+
+            updateTank();
+        }
+
+        function removeWater(){
+
+            if(level > 0){
+                level--;
+            }
+
+            updateTank();
+        }
+
+        function updateTank(){
+            let water = document.getElementById("water");
+            let text = document.getElementById("text");
+            let percentage = level * 10;
+            water.style.height = percentage + "%";
+            
+            if(level == 0){
+                text.innerHTML = "Tank Empty";
+            }
+
+            else if(level == 10){
+                text.innerHTML = "Tank Full - 100%";
+            }
+
+            else{
+                text.innerHTML = "Level " + level + " - " + percentage + "%";
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

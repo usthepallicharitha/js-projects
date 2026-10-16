@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size:50px;
+            background-color: black;
+            color: white;
+            font-size: 100px;
+        }
+        div{
+            position:absolute;
+            top:40%;
+            left:37%;
+            }
+    </style>
+</head>
+
+<body>
+    <div id="clock">00:00:00</div>
+    <script>
+        function showtime(){
+            var date=new Date();
+            var h=date.getHours();
+            var m=date.getMinutes();
+            var s=date.getSeconds();
+            h=String(h).padStart(2,'0');
+            m=String(m).padStart(2,'0');
+            s=String(s).padStart(2,'0');
+            var time=h+":"+m+":"+s;
+
+            document.getElementById("clock").innerText = time;
+
+}
+        setInterval(showtime,1000);
+        showtime();
+        
+    </script>
+</body>
+</html>

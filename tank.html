@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+</head>
+<body>
+<div id="tank">
+<div class="water" id="water"></div>
+<h1 id="text"> </h1>
+</div>
+<button type="button" onclick="fillwater()"> fill </button>
+<button type="button" onclick="removewater()"> remove</button>
+<script>
+var level=0;
+function fillwater(){
+if(level<10){
+level++;
+updatetank()
+}
+}
+function removewater(){
+if(level>0){
+level--;
+updatetank()
+}
+}
+function updatetank(){
+var water=document.getElementById("water");
+var text=document.getElementById("text");
+var percentage=level*10;
+water.style.height=percentage+"%";
+if(level==0){
+text.innerHTML="waterr is empty, pleasee fill the waterrrr";
+}
+else if(level==10){
+text.innerHTML="water is fulllll";
+}
+else{
+text.innerHTML="level " + level + "-" + percentage+"%";
+}
+}
+</script>
+</body>
+</html>
