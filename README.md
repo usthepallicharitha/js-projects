@@ -14,14 +14,10 @@ interactive web design.
 | 1 | Simple Calculator | Performs basic arithmetic operations. |
 | 2 | Temperature Converter | Converts temperatures between different units. |
 | 3 | To-Do List | Helps users organize and manage tasks. |
-| 4 | Celsius to Fahrenheit Converter | Converts Celsius temperatures into Fahrenheit. |
-| 5 | Clock | Displays a clock interface. |
-| 6 | Color Generator | Generates colors dynamically. |
-| 7 | Digital Clock | Displays the current time digitally. |
-| 8 | Password Generator | Generates random passwords. |
-| 9 | Password | A password-related web project. |
-| 10 | Tank | A tank-themed web project. |
-| 11 | Water Tank | A water tank-related web project. |
+| 4 | Color Generator | Generates colors dynamically. |
+| 5 | Digital Clock | Displays the current time digitally. |
+| 6 | Password Generator | Generates random passwords. |
+| 7 | Water Tank | A water tank-related web project. |
 
 ## 🛠️ Technologies Used
 
